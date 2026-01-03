@@ -103,6 +103,9 @@ def main():
                         last_saved_plate = confirmed
                         last_saved_time = now
 
+                    else:
+                        print(f"[SKIP] {confirmed} (Cooldown active or same as last saved)")
+
                     plate_buffer.clear()
             elif raw_text:
                 cv2.putText(vis, f"RAW: {raw_text}", (x, y), cv2.FONT_HERSHEY_SIMPLEX, 0.65, (0, 165, 255), 2)
